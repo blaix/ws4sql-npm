@@ -6,10 +6,10 @@
     "ws4sqlite": "cli.js"
   },
   "dependencies": {
+    "env-paths": "^3.0.0",
     "unzipper": "^0.10.11"
   },
   "description": "Wrapper to install and use ws4sql with npm.",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
