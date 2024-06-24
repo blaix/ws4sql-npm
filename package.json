@@ -1,6 +1,7 @@
 {
   "name": "ws4sq",
   "version": "0.17dev2",
+  "type": "module",
   "main": "index.js",
   "bin": {
     "ws4sqlite": "cli.js"

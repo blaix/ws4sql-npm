@@ -1,14 +1,19 @@
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
-const { spawn } = require('child_process');
-const os = require('os');
-const unzipper = require('unzipper');
+import fs from 'fs';
+import path from 'path';
+import https from 'https';
+import { spawn } from 'child_process';
+import os from 'os';
+import unzipper from 'unzipper';
+import envPaths from 'env-paths';
+import { fileURLToPath } from 'url';
 
 const VERSION = '0.17dev2';
 const BASE_URL = `https://github.com/proofrock/ws4sqlite/releases/download/ws4sql_v${VERSION}`;
 const EXECUTABLE_NAME = process.platform === 'win32' ? 'ws4sql.exe' : 'ws4sql';
-const EXECUTABLE_PATH = path.join(__dirname, EXECUTABLE_NAME);
+
+const paths = envPaths('ws4sql');
+const CACHE_DIR = paths.cache;
+const EXECUTABLE_PATH = path.join(CACHE_DIR, EXECUTABLE_NAME);
 
 function getPlatform() {
   switch (process.platform) {
@@ -31,6 +36,12 @@ function getDownloadUrl() {
   const platform = getPlatform();
   const arch = getArch();
   return `${BASE_URL}/ws4sql-v${VERSION}-${platform}-${arch}.zip`;
+}
+
+function ensureCacheDir() {
+  if (!fs.existsSync(CACHE_DIR)) {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+  }
 }
 
 function downloadAndExtractExecutable(url) {
@@ -60,6 +71,7 @@ function downloadAndExtractExecutable(url) {
 }
 
 async function ensureExecutable() {
+  ensureCacheDir();
   if (!fs.existsSync(EXECUTABLE_PATH)) {
     console.log('Downloading and extracting ws4sql executable...');
     const url = getDownloadUrl();
@@ -92,7 +104,4 @@ function runWs4sql(args) {
   });
 }
 
-module.exports = {
-  runWs4sql,
-  executablePath: EXECUTABLE_PATH
-};
+export { runWs4sql, EXECUTABLE_PATH as executablePath };

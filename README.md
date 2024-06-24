@@ -19,7 +19,7 @@ ws4sql --help
 From your own javascript:
 
 ```js
-const { runWs4sql } = require('ws4sql');
+import { runWs4sql } from 'ws4sql';
 
 runWs4sql(['--help'])
   .then(() => console.log('ws4sql command executed successfully'))

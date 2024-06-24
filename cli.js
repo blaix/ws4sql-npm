@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { runWs4sql } = require('./index');
+import { runWs4sql } from './index.js';
 
 const args = process.argv.slice(2);
 
