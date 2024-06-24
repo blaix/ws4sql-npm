@@ -1,0 +1,26 @@
+{
+  "name": "ws4sq",
+  "version": "0.17dev2",
+  "main": "index.js",
+  "bin": {
+    "ws4sqlite": "cli.js"
+  },
+  "dependencies": {
+    "unzipper": "^0.10.11"
+  },
+  "description": "Wrapper to install and use ws4sql with npm.",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blaix/ws4sql-npm.git"
+  },
+  "author": "Justin Blake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blaix/ws4sql-npm/issues"
+  },
+  "homepage": "https://github.com/blaix/ws4sql-npm#readme"
+}
