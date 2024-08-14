@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "ws4sqlite": "cli.js"
+    "ws4sql": "cli.js"
   },
   "dependencies": {
     "env-paths": "^3.0.0",
