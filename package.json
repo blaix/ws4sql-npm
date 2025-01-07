@@ -1,6 +1,6 @@
 {
   "name": "ws4sql",
-  "version": "0.17dev2",
+  "version": "0.17.0-dev2",
   "type": "module",
   "main": "index.js",
   "bin": {
