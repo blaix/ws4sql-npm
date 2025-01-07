@@ -1,6 +1,6 @@
 {
-  "name": "ws4sq",
-  "version": "0.17dev2",
+  "name": "ws4sql",
+  "version": "0.17dev2-1",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -10,10 +10,7 @@
     "decompress": "^4.2.1",
     "env-paths": "^3.0.0"
   },
-  "description": "Wrapper to install and use ws4sql with npm.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Install and use ws4sql with npm.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blaix/ws4sql-npm.git"
@@ -23,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/blaix/ws4sql-npm/issues"
   },
-  "homepage": "https://github.com/blaix/ws4sql-npm#readme",
+  "homepage": "https://github.com/blaix/ws4sql-npm",
   "devDependencies": {
     "prettier": "^3.4.2"
   }

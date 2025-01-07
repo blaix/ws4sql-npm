@@ -1,6 +1,6 @@
-# ws4sqlite
+# ws4sql npm package
 
-Wrapper to install and use [ws4sqlite](https://github.com/proofrock/ws4sqlite) with npm.
+Install and use [ws4sql(ite)](https://github.com/proofrock/ws4sqlite) via npm.
 
 ## Install
 
