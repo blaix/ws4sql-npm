@@ -19,7 +19,7 @@ function getPlatform() {
     case "darwin":
       return "darwin";
     case "win32":
-      return "windows";
+      return "win";
     case "linux":
       return "linux";
     default:
@@ -30,9 +30,14 @@ function getPlatform() {
 function getArch() {
   switch (process.arch) {
     case "x64":
-      return "amd64";
+      return "x86_64";
+    case "x86":
+      return "x86_64";
     case "arm64":
       return "arm64";
+    // TODO: test this arch
+    case "arm-v6":
+      return "arm-v6";
     default:
       throw new Error(`Unsupported architecture: ${process.arch}`);
   }
