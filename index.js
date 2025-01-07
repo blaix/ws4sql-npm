@@ -78,6 +78,12 @@ function downloadAndExtractExecutable(url) {
           .catch(reject);
         return;
       }
+      
+      if (response.statusCode == 404) {
+	const error = `${url} not found.`;
+	console.error(`ERROR: ${error}`);
+        reject(new Error(error));
+      }
 
       const data = [];
       response.on("data", (chunk) => {
