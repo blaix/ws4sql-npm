@@ -4,7 +4,7 @@ Install and use [ws4sql(ite)](https://github.com/proofrock/ws4sqlite) via npm.
 
 ## Installation and Usage
 
-Globally:
+Globally (may require admin/sudo):
 
 ```
 npm install -g ws4sql
