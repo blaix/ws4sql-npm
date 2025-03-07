@@ -1,3 +1,0 @@
-- [X] Put the downloaded executable in an appropriate place
-- [ ] Test and fix other platforms and architectures
-- [ ] Explain pre-release in readme
