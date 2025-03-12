@@ -18,7 +18,13 @@ npm install ws4sql
 npx ws4sql --help
 ```
 
-From your own javascript:
+Try out or use directly with [npx](https://docs.npmjs.com/cli/v8/commands/npx):
+
+```
+npx ws4sql --quick-db test.db
+```
+
+Or from your own javascript:
 
 ```js
 import { runWs4sql } from 'ws4sql';
