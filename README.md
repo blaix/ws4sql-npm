@@ -4,27 +4,27 @@ Install and use [ws4sql(ite)](https://github.com/proofrock/ws4sqlite) via npm.
 
 ## Installation and Usage
 
-Globally (may require admin/sudo):
+You can try it out or use directly with [npx](https://docs.npmjs.com/cli/v8/commands/npx):
+
+```
+npx ws4sql --quick-db test.db
+```
+
+Install it globally (may require admin/sudo):
 
 ```
 npm install -g ws4sql
 ws4sql --help
 ```
 
-Locally:
+Install it locally:
 
 ```
 npm install ws4sql
 npx ws4sql --help
 ```
 
-Try out or use directly with [npx](https://docs.npmjs.com/cli/v8/commands/npx):
-
-```
-npx ws4sql --quick-db test.db
-```
-
-Or from your own javascript:
+Or use from your own javascript:
 
 ```js
 import { runWs4sql } from 'ws4sql';
